@@ -1,16 +1,11 @@
-package ru.savin.core;
+package ru.savin.messageanalyzer.core;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * Hello world!
- *
- */
-
 @SpringBootApplication
-public class App {
+public class MedicalMessageAnalyzerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(App.class, args);
+        SpringApplication.run(MedicalMessageAnalyzerApplication.class, args);
     }
 }
