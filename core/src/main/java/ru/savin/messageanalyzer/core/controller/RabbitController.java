@@ -1,6 +1,7 @@
 package ru.savin.messageanalyzer.core.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import liga.medical.dto.RabbitMessageDTO;
 import liga.medical.dto.RabbitMessageDto;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +19,7 @@ public class RabbitController {
     private final RabbitSenderService rabbitSenderService;
 
     @PostMapping("/send")
-    public void sendMessage(@RequestBody RabbitMessageDto rabbitMessageDto) throws JsonProcessingException {
+    public void sendMessage(@RequestBody RabbitMessageDTO rabbitMessageDto) throws JsonProcessingException {
         rabbitSenderService.sendMessage(rabbitMessageDto, RabbitConfig.ROUTER_QUEUE_NAME);
     }
 }
